@@ -7,7 +7,11 @@
     <test name = "QA Test Automation">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name = "tests.SampleTest1" />
+            <class name = "tests.SampleTest1" >
+                <methods>
+                    <include name ="test1" />
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
