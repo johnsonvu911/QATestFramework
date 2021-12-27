@@ -6,6 +6,7 @@ Please run the following commands to make sure necessary libraries are installed
 mvn clean 
 mvn install 
 ```
+Please download chrome-driver for your current-version Chrome browser and copy to "drivers" folder in the Project location.
 
 ## Usage 
 Please run the tests via TestRunner.xml by open it and right-click -> select Run item from context menu. 
