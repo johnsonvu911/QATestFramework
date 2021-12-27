@@ -1,7 +1,7 @@
 # QATestFramework
  
 ## Installation 
-Please run the following commands to make sure necessary libraries are install prior to complile
+Please run the following commands to make sure necessary libraries are installed prior to complile
 ```bash
 mvn clean 
 mvn install 
