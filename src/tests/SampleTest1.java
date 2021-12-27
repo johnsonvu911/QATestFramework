@@ -17,12 +17,10 @@ public class SampleTest1 extends TestBase {
     InventoryPageActions inventoryPage = new InventoryPageActions();
     ManufacturingPageActions manufacturingPage = new ManufacturingPageActions();
 
-    @SneakyThrows
     @Test
     public void test1() {
         String productName = NameGenerator.generateRandomName(12);
 
-//        openBrowser("chrome");
         seleniumHelper.navigateTo(Constants.testSite);
         loginPage.login(Constants.loginEmail, Constants.loginPassword);
 
