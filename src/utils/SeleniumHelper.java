@@ -5,6 +5,7 @@ import data.Constants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,6 +13,8 @@ import tests.TestBase;
 
 import java.time.Duration;
 import java.util.List;
+
+import static tests.TestBase.driver;
 
 public class SeleniumHelper {
 
@@ -92,6 +95,7 @@ public class SeleniumHelper {
         Select select = new Select(TestBase.driver.findElement(element));
         select.selectByVisibleText(option);
     }
+
     public String getText(By element) {
         waitForElementDisplayed(element, Constants.longTimeout);
         return TestBase.driver.findElement(element).getText();
@@ -117,6 +121,23 @@ public class SeleniumHelper {
                 }
         }
 
+    }
+    public void Drag_Filter(By start_element, By end_element, int begin_distance, int end_distance) throws InterruptedException {
+        Actions act = new Actions(driver);
+        WebElement start = driver.findElement(start_element);
+        act.dragAndDropBy(start, begin_distance, 0).build().perform();
+        Thread.sleep(600);
+        WebElement end = driver.findElement(end_element);
+        act.dragAndDropBy(end, end_distance, 0).build().perform();
+        Thread.sleep(600);
+
+    }
+    public void Move_Element(By element) {
+        waitForElementDisplayed(element, Constants.defaultTimeout);
+        //Creating object of an Actions class
+        Actions action = new Actions(driver);
+        //Performing the mouse hover action on the target element.
+        action.moveToElement(driver.findElement(element)).perform();
     }
 
 }

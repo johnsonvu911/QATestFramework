@@ -37,8 +37,8 @@ public class TestBase {
 
     }
     @BeforeMethod
-    @Parameters(value={"browser"})
-    public void beforeMethod(String browser, Method testMethod) {
+    @Parameters({"browser"})
+    public void beforeMethod(@Optional("chorme")String browser, Method testMethod) {
         openBrowser(browser);
         logger = report.createTest(testMethod.getName());
     }

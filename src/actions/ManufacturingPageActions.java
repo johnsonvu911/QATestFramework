@@ -10,18 +10,18 @@ public class ManufacturingPageActions {
 
     SeleniumHelper seleniumHelper = new SeleniumHelper();
     public void createOrder(String productName, String productToConsume) {
-        seleniumHelper.clickButton(Constants.createButton);
-        seleniumHelper.textBoxInput(ManufacturingPageElements.productNameInput, productName);
-        seleniumHelper.clickByText(productName);
-
-        seleniumHelper.click(ManufacturingPageElements.addALineButton);
-        seleniumHelper.textBoxInput(ManufacturingPageElements.productNameToConsumeInput, productName);
-        seleniumHelper.clickByText(ManufacturingPageElements.foundProductName, productName);
-
-        seleniumHelper.textBoxInput(ManufacturingPageElements.productNumberToConsumeInput, productToConsume);
-
-        seleniumHelper.clickButton(Constants.saveButton);
-        TestBase.logger.log(Status.INFO, String.format("Created order with product name: %s", productName));
+//        seleniumHelper.clickButton(Constants.createButton);
+//        seleniumHelper.textBoxInput(ManufacturingPageElements.productNameInput, productName);
+//        seleniumHelper.clickByText(productName);
+//
+//        seleniumHelper.click(ManufacturingPageElements.addALineButton);
+//        seleniumHelper.textBoxInput(ManufacturingPageElements.productNameToConsumeInput, productName);
+//        seleniumHelper.clickByText(ManufacturingPageElements.foundProductName, productName);
+//
+//        seleniumHelper.textBoxInput(ManufacturingPageElements.productNumberToConsumeInput, productToConsume);
+//
+//        seleniumHelper.clickButton(Constants.saveButton);
+//        TestBase.logger.log(Status.INFO, String.format("Created order with product name: %s", productName));
     }
 
     public void updateNewOrderToDone(String orderNumberToCompare) {

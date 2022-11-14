@@ -1,8 +1,11 @@
 package actions.Filter;
 
 import objects.FilterElements;
+import objects.WishlistElements;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import tests.TestBase;
 import utils.SeleniumHelper;
 
 import java.util.ArrayList;
@@ -10,52 +13,30 @@ import java.util.ArrayList;
 import static tests.TestBase.driver;
 
 
-public class FilterActions {
+public class WishlistActions {
     SeleniumHelper seleniumHelper = new SeleniumHelper();
-    public void Filter_Start_End(Integer Start, Integer End) throws InterruptedException {
+    public void Click_Icon_Tym() throws InterruptedException {
         Thread.sleep(1000);
-        seleniumHelper.Drag_Filter(FilterElements.Start, FilterElements.End, Start,End);
-        Thread.sleep(600);
-        seleniumHelper.click(FilterElements.Filter);
+        seleniumHelper.click(WishlistElements.Product);
+        Thread.sleep(400);
+        seleniumHelper.click(WishlistElements.tym);
+        Thread.sleep(400);
+    }
+    public String Get_Find_Favorite_Product() throws InterruptedException{
+        Thread.sleep(400);
+        return seleniumHelper.getText(WishlistElements.Product_Name);
+    }
+    public void  Go_To_Wishlist(){
+        seleniumHelper.click(WishlistElements.Wishlist);
     }
 
-    public Float Get_StartPrice() throws InterruptedException {
-        Float start_price = Float.valueOf(seleniumHelper.getText(FilterElements.Price_Start)
-                .substring(1).replaceAll("[.]", "").replaceAll(",","."));
-        return start_price;
+    public void Get_ALL_Product() throws InterruptedException {
+        Thread.sleep(1000);
+        System.out.println(seleniumHelper.getText(WishlistElements.Product));
+        Thread.sleep(400);
+        seleniumHelper.Move_Element(WishlistElements.Product);
+        Thread.sleep(500);
+        seleniumHelper.click(WishlistElements.test);
+        Thread.sleep(400);
     }
-    public Float Get_EndPrice() throws InterruptedException {
-        Float end_price = Float.valueOf(seleniumHelper.getText(FilterElements.Price_End)
-                .substring(1).replaceAll("[.]", "").replaceAll(",","."));
-        return end_price;
-    }
-    public ArrayList<WebElement> ListElement() throws InterruptedException {
-        seleniumHelper.click(FilterElements.Filter);
-        ArrayList<WebElement> list = (ArrayList<WebElement>) driver.findElements(FilterElements.Div_Price);
-        return  list;
-    }
-    public Boolean Check_PriceInRange_StartEnd(ArrayList<WebElement> list,Float start_price, Float end_price) throws InterruptedException {
-        Boolean result = true;
-        for(WebElement element : list) {
-            System.out.println(element.getText());
-            String temp = element.getText().replaceAll("[.]", "").replaceAll(",", ".");
-            if (temp.indexOf(" – ") != -1) {
-                Float min_Price = Float.valueOf(temp.substring(1, temp.indexOf(" – ")));
-                Float max_Price = Float.valueOf(temp.substring(temp.indexOf(" – ") + 4));
-                if ((min_Price > start_price && min_Price < end_price) || (max_Price > start_price && max_Price < end_price)) {
-                    result = true;
-                } else {
-                    result = false;
-                }
-            } else {
-                if (Float.valueOf(temp.substring(1)) < end_price && Float.valueOf(temp.substring(1)) > start_price) {
-                    result = true;
-                } else {
-                    result = false;
-                }
-            }
-        }
-        return  result;
-    }
-
 }

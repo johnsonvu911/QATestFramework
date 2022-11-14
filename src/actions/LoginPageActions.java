@@ -16,5 +16,12 @@ public class LoginPageActions {
         seleniumHelper.clickButton(Constants.loginButton);
         TestBase.logger.log(Status.INFO, String.format("logged in with %s and %s", email, password));
     }
+    public void login_shop(String username, String password) {
+        seleniumHelper.click(LoginPageElements.loginLable);
+        seleniumHelper.textBoxInput(LoginPageElements.usernameTextBox, username);
+        seleniumHelper.textBoxInput(LoginPageElements.passwordTextbox, password);
+        seleniumHelper.clickButton(Constants.loginButton);
+        TestBase.logger.log(Status.INFO, String.format("logged in with %s and %s", username, password));
+    }
 
 }

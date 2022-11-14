@@ -9,7 +9,7 @@ import utils.SeleniumHelper;
 public class InventoryPageActions {
 
     SeleniumHelper seleniumHelper = new SeleniumHelper();
-    public void createProduct(String productName) {
+    /*public void createProduct(String productName) {
         seleniumHelper.clickButton(Constants.createButton);
         seleniumHelper.textBoxInput(InventoryPageElements.productNameInput, productName);
         seleniumHelper.click(InventoryPageElements.updateQuantityButton);
@@ -22,5 +22,5 @@ public class InventoryPageActions {
         seleniumHelper.textBoxInput(InventoryPageElements.inventoryQuantityInput, quantity);
         seleniumHelper.clickButton(Constants.saveButton);
         TestBase.logger.log(Status.INFO, String.format("updated product quantity to %s", quantity));
-    }
+    }*/
 }
