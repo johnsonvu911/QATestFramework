@@ -6,6 +6,8 @@ public interface Constants {
     int defaultTimeout = 10000;
     int shortTimeout = 5000;
     int longTimeout = 30000;
+
+    String keyword = "Jeans";
     String testSite = "https://flatsome3.uxthemes.com/shop/";//"https://flatsome3.uxthemes.com/shop/";
     String loginEmail = "lam81896@gmail.com";
     String loginPassword = "Kimmaimai123";

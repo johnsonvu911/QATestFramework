@@ -139,5 +139,13 @@ public class SeleniumHelper {
         //Performing the mouse hover action on the target element.
         action.moveToElement(driver.findElement(element)).perform();
     }
+    public Integer getQuantity(By element, String cate) {
+        List <WebElement> allSearchElements = TestBase.driver.findElements(element);
+        int howManyElements = allSearchElements.size();
+        System.out.println("Day la ket qua "+ cate + ": "+ howManyElements);
+        return  howManyElements;
+    }
+
+
 
 }

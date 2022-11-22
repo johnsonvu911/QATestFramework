@@ -8,4 +8,10 @@ public interface FilterElements {
     By test= By.xpath("//*[contains(@class, \"product-small box\")]");
     By Filter = By.xpath("//button[contains(text(),'Filter')]");
     By Div_Price = By.xpath("//div[@class='price-wrapper']");
+    By Select_Sort = By.xpath("//select[@class='orderby']");
+    By Search_Icon = By.xpath("//*[@class='icon-search']");
+    By Input_Search = By.xpath("//*[@id='woocommerce-product-search-field-0']");
+
+    By Search_Button = By.xpath("//*[@class='ux-search-submit submit-button secondary button icon mb-0']");
+    By Div_Name= By.xpath("//p[@class='name product-title woocommerce-loop-product__title']");
 }
