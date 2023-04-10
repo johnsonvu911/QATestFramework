@@ -7,6 +7,7 @@ public interface Constants {
     int shortTimeout = 5000;
     int longTimeout = 30000;
     String testSite = "https://aspireapp.odoo.com/";
+    String testSite2 = "https://xstore.8theme.com/elementor/";
     String loginEmail = "user@aspireapp.com";
     String loginPassword = "@sp1r3app";
     String loginButton = "Log in";

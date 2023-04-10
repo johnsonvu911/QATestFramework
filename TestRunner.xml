@@ -7,9 +7,9 @@
     <test name = "QA Test Automation">
         <parameter name="browser" value="chrome" />
         <classes>
-            <class name = "tests.SampleTest1" >
+            <class name = "tests.SampleTest2" >
                 <methods>
-                    <include name ="test1" />
+                    <include name ="test2" />
                 </methods>
             </class>
         </classes>

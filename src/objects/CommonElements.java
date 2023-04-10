@@ -9,4 +9,5 @@ public interface CommonElements {
     By productsMenuSubItem = By.xpath("//*[@data-menu-xmlid='stock.menu_product_variant_config_stock']");
     String navigationActiveItem = "//*[contains(@class, 'breadcrumb-item active') and normalize-space(text()) = '%s']";
     By menuToggle = By.xpath("//*[contains(@class, 'o_menu_toggle')]");
+    String colorOption = "/html/body/div[1]/div/div/div/div[4]/span[1]";
 }
