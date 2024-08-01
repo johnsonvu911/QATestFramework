@@ -1,4 +1,4 @@
-package data;
+package webapp.testdata;
 
 import java.util.Map;
 

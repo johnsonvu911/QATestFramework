@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name = "Sample Test">
     <listeners>
-        <listener class-name="utils.TestSuiteListener" />
+        <listener class-name="core.base.TestSuiteListener" />
     </listeners>
     <test name = "QA Test Automation">
         <parameter name="browser" value="chrome" />

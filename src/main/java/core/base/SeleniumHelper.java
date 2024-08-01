@@ -1,4 +1,4 @@
-package utils;
+package core.base;
 
 import com.aventstack.extentreports.Status;
 import data.Constants;

@@ -1,10 +1,9 @@
-package utils;
+package core.base;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.*;
 import org.testng.annotations.ITestAnnotation;
-import tests.TestBase;
 import org.apache.commons.io.FileUtils;
 
 import java.io.*;

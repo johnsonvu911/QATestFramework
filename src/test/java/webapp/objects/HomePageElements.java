@@ -1,4 +1,4 @@
-package objects;
+package webapp.objects;
 
 import org.openqa.selenium.By;
 

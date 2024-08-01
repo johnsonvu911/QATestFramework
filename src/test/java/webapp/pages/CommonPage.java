@@ -1,13 +1,13 @@
-package actions;
+package webapp.pages;
 
 import com.aventstack.extentreports.Status;
-import data.Constants;
+import webapp.testdata.Constants;
 import objects.CommonElements;
 import org.openqa.selenium.By;
 import tests.TestBase;
-import utils.SeleniumHelper;
+import core.base.SeleniumHelper;
 
-public class CommonActions {
+public class CommonPage {
 
     SeleniumHelper seleniumHelper = new SeleniumHelper();
     public boolean isMenuBarDisplayed() {

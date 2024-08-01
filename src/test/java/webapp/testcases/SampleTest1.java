@@ -1,8 +1,8 @@
-package tests;
+package webapp.testcases;
 
 import actions.*;
+import core.base.TestBase;
 import data.Constants;
-import lombok.SneakyThrows;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.NameGenerator;

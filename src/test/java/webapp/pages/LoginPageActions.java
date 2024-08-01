@@ -1,10 +1,10 @@
-package actions;
+package webapp.pages;
 
 import com.aventstack.extentreports.Status;
 import data.Constants;
 import objects.LoginPageElements;
 import tests.TestBase;
-import utils.SeleniumHelper;
+import core.base.SeleniumHelper;
 
 public class LoginPageActions {
 

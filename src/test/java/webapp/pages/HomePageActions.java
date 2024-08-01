@@ -1,9 +1,8 @@
-package actions;
+package webapp.pages;
 
 import objects.HomePageElements;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.Select;
-import utils.SeleniumHelper;
+import core.base.SeleniumHelper;
 
 
 public class HomePageActions {
