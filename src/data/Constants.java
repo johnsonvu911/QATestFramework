@@ -6,9 +6,9 @@ public interface Constants {
     int defaultTimeout = 10000;
     int shortTimeout = 5000;
     int longTimeout = 30000;
-    String testSite = "https://aspireapp.odoo.com/";
-    String loginEmail = "user@aspireapp.com";
-    String loginPassword = "@sp1r3app";
+    String testSite = "https://googe.com/";
+    String loginEmail = "user@google.com";
+    String loginPassword = "@letmein";
     String loginButton = "Log in";
     String createButton = "Create";
     String saveButton = "Save";
