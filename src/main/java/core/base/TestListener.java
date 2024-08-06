@@ -10,7 +10,7 @@ import java.io.*;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-public class TestSuiteListener implements ITestListener, IAnnotationTransformer {
+public class TestListener implements ITestListener, IAnnotationTransformer {
     @Override
     public void onTestStart(ITestResult result) {
         ITestListener.super.onTestStart(result);

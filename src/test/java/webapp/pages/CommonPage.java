@@ -5,26 +5,26 @@ import webapp.testdata.Constants;
 import objects.CommonElements;
 import org.openqa.selenium.By;
 import tests.TestBase;
-import core.base.SeleniumHelper;
+import core.base.ElementActions;
 
 public class CommonPage {
 
-    SeleniumHelper seleniumHelper = new SeleniumHelper();
+    ElementActions elementActions = new ElementActions();
     public boolean isMenuBarDisplayed() {
-        return seleniumHelper.isElementDisplayed(CommonElements.inventoryMenuBar);
+        return elementActions.isElementDisplayed(CommonElements.inventoryMenuBar);
     }
     public void navigateToProductsPage() {
        if (isMenuBarDisplayed()) {
-           seleniumHelper.click(CommonElements.productsMenuItem);
-           seleniumHelper.click(CommonElements.productsMenuSubItem);
+           elementActions.click(CommonElements.productsMenuItem);
+           elementActions.click(CommonElements.productsMenuSubItem);
        } else {
            TestBase.logger.log(Status.FAIL, "Menu bar not display");
        }
     }
     public void waitForPageDisplayed(String pageName) {
-         seleniumHelper.waitForElementDisplayed(By.xpath(String.format(CommonElements.navigationActiveItem, pageName)), Constants.defaultTimeout);
+         elementActions.waitForElementDisplayed(By.xpath(String.format(CommonElements.navigationActiveItem, pageName)), Constants.defaultTimeout);
     }
     public void clickMenuToggle() {
-        seleniumHelper.click(CommonElements.menuToggle);
+        elementActions.click(CommonElements.menuToggle);
     }
 }

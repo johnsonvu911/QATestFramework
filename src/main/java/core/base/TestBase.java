@@ -10,6 +10,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
@@ -82,8 +84,9 @@ public class TestBase {
     private void setupDriver(String browserName) {
         if(browserName.equalsIgnoreCase(("firefox"))) {
             //---TO DO ----
+            driver = new FirefoxDriver();
         } else if(browserName.equalsIgnoreCase(("edge"))) {
-            //---TO DO ----
+            driver = new EdgeDriver();
         }
         else {
             System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + File.separator + "drivers" + File.separator + "chromedriver.exe");
